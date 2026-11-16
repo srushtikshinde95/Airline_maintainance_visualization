@@ -22,7 +22,8 @@ import java.util.concurrent.Executors;
  */
 public class WebAppMain {
 
-    public static final int PORT = 8081;
+   public static final int PORT =
+        Integer.parseInt(System.getenv().getOrDefault("PORT", "8081"));
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     public static void main(String[] args) throws Exception {
